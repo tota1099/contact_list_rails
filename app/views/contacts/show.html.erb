@@ -1,14 +1,24 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @contact.name %>
-</p>
+<div class="row">
+  <div class="col-xs-12 text-center">
+    <h1>Visualizar Contato</h1>
+  </div>
+  <div class="col-xs-12">
+    <p>
+      <h4><b>Name</b></h4>
+      <%= @contact.name %>
+    </p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @contact.phone %>
-</p>
+    <p>
+      <h4><b>Phone</b></h4>
+      <%= @contact.phone %>
+    </p>
+  </div>
+</div>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<div class="row">
+  <div class="col-xs-12">
+    <%= link_to 'Edit',  edit_contact_path(@contact), class: 'btn btn-warning' %> 
+    <%= link_to 'Back',  contacts_path, class: 'btn btn-success' %>
+  </div>
+</div>
